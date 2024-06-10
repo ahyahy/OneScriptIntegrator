@@ -3,7 +3,7 @@ using ScriptEngine.Machine;
 
 namespace osi
 {
-    [ContextClass ("КлАргументыСобытия", "OsiEventArgs")]
+    [ContextClass ("КлАргументы", "OsiEventArgs")]
     public class OsiEventArgs : AutoContext<OsiEventArgs>
     {
         private IValue parameter;

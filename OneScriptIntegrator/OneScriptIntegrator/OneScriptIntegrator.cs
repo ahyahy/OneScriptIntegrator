@@ -56,7 +56,7 @@ namespace osi
             return new OsiAction(script, methodName, param);
         }
 
-        [ContextProperty("АргументыСобытия", "EventArgs")]
+        [ContextProperty("Аргументы", "EventArgs")]
         public IValue EventArgs
         {
             get { return eventArgs; }
