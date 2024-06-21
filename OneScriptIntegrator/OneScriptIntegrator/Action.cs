@@ -3,7 +3,7 @@ using ScriptEngine.Machine;
 
 namespace osi
 {
-    [ContextClass ("КлДействие", "OsiAction")]
+    [ContextClass ("ОсиДействие", "OsiAction")]
     public class OsiAction : AutoContext<OsiAction>
     {
         public OsiAction(IRuntimeContextInstance script, string methodName, IValue param = null)
