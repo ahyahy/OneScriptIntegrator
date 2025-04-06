@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE>Документация</TITLE>
+    <META content="text/html; charset=Windows-1252" http-equiv="Content-Type">
+    <LINK rel="stylesheet" type="text/css" href="styleos.css">
+	<script defer src="mobil.js"></script>
+</HEAD>
+<body>
+    <header>
+        <section>
+            <div>
+                <div id="logo"><big><big><big>Интегратор<br><small><small>для сценарного языка</small></small> OneScript </big></big></big></div>
+            </div>
+            <div style="direction: rtl; overflow:hidden; padding: 8px 0px 0px 0px; margin-top:-7px;">
+                <DIV id=div22>
+                    <input type="checkbox" id="toggle">
+                    <label id="label1" class="hamburger-icon" onclick="label1click()"><div></div><div></div><div></div></label>
+                </DIV>
+                <nav>
+                    <a onclick="navclick(event)" href="index.html">Главная</a>
+                    <a onclick="navclick(event)" href="screenshot.html">Скриншоты</a>
+                    <a onclick="navclick(event)" href="howworks.html">Как это работает</a>
+                    <a onclick="navclick(event)" href="doc.html">Документация</a>
+                    <a onclick="navclick(event)" href="down.html">Скачать</a>
+                    <a onclick="navclick(event)" href="kont.html">Контакты</a>
+                    <input type="checkbox" id="toggle2">
+                    <a id="mobil" onclick="mobilClick()">`</a>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <div class="cont1">
+        <!-- Секция переключателя -->
+        <input type="checkbox" id="toggle1">
+        <!-- Блок для затемнения справки -->
+        <div class="divmodal"></div>
+        <!-- Сама справка -->
+        <div class="divleft" id="divleftid" onclick="divleftClick(event)">
+            <div id="expandcollapse">
+                <div id="expand" onclick="expand()">развернуть</div>
+                <div id="separator">&nbsp;|&nbsp;</div>
+                <div id="collapse" onclick="collapse()">свернуть</div>
+            </div>
+            <details>
+				<summary class="menu"><a>OneScriptIntegrator</a></summary>
+				<details>
+                    <summary class="menu2"><a href="OSIntegrator/OSIntegrator.Action.html" target="right">Действие (Action) Класс</a></summary>
+					<p class="konstr"><a href="OSIntegrator/OSIntegrator.ActionConstructor.html" target="right">Действие (Action) Конструктор</a></p>
+                    <p class="members"><a href="OSIntegrator/OSIntegrator.ActionMembers.html" target="right">Действие (Action) Члены</a></p>
+                    <details>
+                        <summary class="menu3"><a href="OSIntegrator/OSIntegrator.ActionProperties.html" target="right">Свойства</a></summary>
+                        <p class="prop"><a href="OSIntegrator/OSIntegrator.Action.MethodName.html" target="right">ИмяМетода (MethodName) Свойство</a></p>
+                        <p class="prop"><a href="OSIntegrator/OSIntegrator.Action.Parameter.html" target="right">Параметр (Parameter) Свойство</a></p>
+                        <p class="prop"><a href="OSIntegrator/OSIntegrator.Action.Script.html" target="right">Сценарий (Script) Свойство</a></p>
+                    </details>
+                </details>
+				<details>
+                    <summary class="menu2"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.html" target="right">ИнтеграторОдноСкрипта (OneScriptIntegrator) Класс</a></summary>
+					<p class="konstr"><a href="OSIntegrator/OSIntegrator.OneScriptIntegratorConstructor.html" target="right">ИнтеграторОдноСкрипта (OneScriptIntegrator) Конструктор</a></p>
+                    <p class="members"><a href="OSIntegrator/OSIntegrator.OneScriptIntegratorMembers.html" target="right">ИнтеграторОдноСкрипта (OneScriptIntegrator) Члены</a></p>
+                    <details>
+                        <summary class="menu3"><a href="OSIntegrator/OSIntegrator.OneScriptIntegratorProperties.html" target="right">Свойства</a></summary>
+                        <p class="prop"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.EventArgs.html" target="right">Аргументы (EventArgs) Свойство</a></p>
+                        <p class="prop"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.ProductName.html" target="right">ИмяПродукта (ProductName) Свойство</a></p>
+                        <p class="prop"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.ShareStructure.html" target="right">ОбщаяСтруктура (ShareStructure) Свойство</a></p>
+                    </details>
+                    <details>
+                        <summary class="menu3"><a href="OSIntegrator/OSIntegrator.OneScriptIntegratorMethods.html" target="right">Методы</a></summary>
+                        <p class="method"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.Action.html" target="right">Действие (Action) Метод</a></p>
+                        <p class="method"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.InjectGlobalProperty.html" target="right">ВвестиГлобальноеСвойство (InjectGlobalProperty) Метод</a></p>
+                        <p class="method"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.Execute.html" target="right">Выполнить (Execute) Метод</a></p>
+                        <p class="method"><a href="OSIntegrator/OSIntegrator.OneScriptIntegrator.LoadScripts.html" target="right">ЗагрузитьСценарии (LoadScripts) Метод</a></p>
+                    </details>
+                </details>
+            </details>
+        </div>
+        <!-- Конец секции переключателя -->
+        <DIV id=nsbanner>
+            <DIV id=TitleRow>
+                <!-- Секция меню -->
+                <section class="menuFrame">
+                    <DIV id=div2 onclick="disableScroll()">
+                        <div id="menu1"></div>
+                        <label id="label2" for="toggle1" class="hamburger-icon1" onclick="label2click()"><div></div><div></div><div></div></label>
+                    </DIV>
+                    <DIV id=div3>
+                        <H1 class=dtH1 id="titlepage">Дизайнер форм для сценарного языка OneScript</H1>
+                    </DIV>
+                </section>
+                <!-- Конец секции меню -->
+            </DIV>
+        </DIV>
+        <div class="frameright">
+            <iframe name="right" id="iframeid" src="OSIntegrator/OSIntegrator.html"></iframe>
+        </div>
+    </div>
+</body>
+</HTML>
