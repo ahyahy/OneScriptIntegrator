@@ -107,7 +107,7 @@ namespace osi
             string pathStartupScript = startupScript.GetPropValue(startupScript.FindProperty("Path")).AsString();
             string nameStartupScript = fullPathStartupScript.Replace(pathStartupScript, "").Replace(".os", "").Replace(separator, "");
             extContext.Insert(nameStartupScript, ValueFactory.Create(p1));
-            extContext.Insert("ОбщаяСтуктура", shareStructure);
+            extContext.Insert("ОбщаяСтруктура", shareStructure);
             scripts.Insert(nameStartupScript, (IValue)p1);
 
             bool isWin = System.Environment.OSVersion.VersionString.Contains("Microsoft");
