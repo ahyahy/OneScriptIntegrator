@@ -1,87 +1,100 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-    <TITLE>OneScriptIntegrator.Execute Method</TITLE>
-    <META content="text/html; charset=Windows-1252" http-equiv="Content-Type">
-    <LINK rel="stylesheet" type="text/css" href="mainstyle.css">
+<html>
+<head>
+    <title>OneScriptIntegrator.Execute Method</title>
+    <meta content="text/html; charset=Windows-1252" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
 	<script defer src="mobilstyle.js"></script>
-</HEAD>
-<BODY id=bodyID class=dtBODY>
-    <DIV id=nsbanner>
-        <DIV id=bannerrow1>
-            <TABLE class=bannerparthead cellSpacing=0>
-                <TBODY>
-                    <TR id=hdr>
-                        <TD class=runninghead></TD>
-                        <TD class=product></TD>
-                    </TR>
-                </TBODY>
-            </TABLE>
-        </DIV>
-        <DIV id=TitleRow>
-            <H1 class=dtH1>ИнтеграторОдноСкрипта.Выполнить (OneScriptIntegrator.Execute)&nbsp;Метод</H1>
-        </DIV>
-    </DIV>
-    <DIV id=nstext>
-        <H4 class=dtH4>Синтаксис</H4>
-        <P>Выполнить(&lt;Действие&gt;)</P>
-        <H4 class=dtH4>Параметры</H4>
-        <DL>
-            <DT><I>Действие</I> (обязательный)</DT>
-            <DD>Тип: <A href="OSIntegrator.Action.html">Действие&nbsp;(Action)</A>.</DD>
-            <DD>Экземпляр класса <B>Действие&nbsp;(Action)</B></DD>
-        </DL>
-        <H4 class=dtH4>Возвращаемое значение</H4>
-        <P></P>
-        <H4 class=dtH4>Описание</H4>
-        <P>Вызывает заданный метод.</P>
-        <H4 class=dtH4>Примечание</H4>
-        <P></P>
-        <H4 class=dtH4>Пример</H4>
-        <P>Расположение файлов в примере должно быть следующим:</P>
-        <P>.\Интегратор\Стартовый.os</P>
-        <P>.\Интегратор\Классы\Главный.os</P>
-        <P>
-            <PRE class=code>
-Действие1 = ИОС.Действие(Сценарии.Главный, "МояПроцедура", Параметры);
-Рез = ИОС.Выполнить(Действие1);
-</PRE>
-            <details>
-                <summary>Полный пример кода</summary>
-                <P>
-                    <PRE class=code>
-<button id="copy1" type="button" style="font-size:100%;">Копировать</button>
-<hr style="border-color: lightgray;"><DIV id="cont1">
-//== Файл Стартовый.os == начало
-ПодключитьВнешнююКомпоненту("C:\444\111\OneScriptIntegrator\OneScriptIntegrator\bin\Debug\OneScriptIntegrator.dll");
-ИОС = Новый ИнтеграторОдноСкрипта();
-
-ОбщаяСтруктура = ИОС.ОбщаяСтруктура;
-ОбщаяСтруктура.Вставить("ИОС", ИОС);
-Сценарии = ИОС.ЗагрузитьСценарии(ЭтотОбъект, ".\");
-
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>ИнтеграторОдноСкрипта.Выполнить (OneScriptIntegrator.Execute)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>Выполнить(&lt;Действие&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>Действие</i> (обязательный)</dt>
+            <dd>Тип: <a href="OSIntegrator.Action.html">Действие&nbsp;(Action)</a>.</dd>
+            <dd>Экземпляр класса <b>Действие&nbsp;(Action)</b></dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Произвольный.</p>
+        <p>Результат выполнения.</p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Вызывает заданный метод.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
 Параметры = Новый Структура();
 Параметры.Вставить("Ключ1", "Значение1");
-Действие1 = ИОС.Действие(Сценарии.Главный, "МояПроцедура", Параметры);
+Действие1 = ИОС.Действие(Сценарии[СлучайноеИмя1], "МояПроцедура", Параметры);
 
 Рез = ИОС.Выполнить(Действие1);
 Сообщить("Действие1 Рез = " + Рез);
-//== Файл Стартовый.os == конец
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="cont0" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="cont0">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
 
-//== Файл Главный.os == начало
-Функция МояПроцедура() Экспорт
-	Пар = ОбщаяСтруктура.ИОС.Аргументы.Параметр;
-	Возврат Пар.Ключ1;
-КонецФункции
-//== Файл Главный.os == конец
-</DIV>
-</PRE>
+СлучайноеИмя1 = ИОС.СлучайноеИмя;
+
+Стр = "
+|Функция МояПроцедура() Экспорт
+|	Пар = ОбщаяСтруктура.ИОС.АргументыСобытия.Параметр;
+|	Возврат Пар.Ключ1;
+|КонецФункции
+|";
+КаталогКлассы = ОбъединитьПути(ИОС.КаталогСценария(ЭтотОбъект), "Temp\Классы4");
+Если Не Новый Файл(КаталогКлассы).Существует() Тогда
+	СоздатьКаталог(КаталогКлассы);
+КонецЕсли;
+Пока Не Новый Файл(КаталогКлассы).Существует() Цикл
+	Приостановить(100);
+КонецЦикла;
+ИОС.ЗаписатьВесьТекст(ОбъединитьПути(ИОС.КаталогСценария(ЭтотОбъект), "Temp\Классы4" + ПолучитьРазделительПути() + СлучайноеИмя1 + ".os"), Стр);
+Приостановить(3000);
+
+ОбщаяСтруктура = ИОС.ОбщаяСтруктура;
+ОбщаяСтруктура.Вставить("ИОС", ИОС);
+Сценарии = ИОС.ЗагрузитьСценарии(ЭтотОбъект, КаталогКлассы);
+
+Параметры = Новый Структура();
+Параметры.Вставить("Ключ1", "Значение1");
+Действие1 = ИОС.Действие(Сценарии[СлучайноеИмя1], "МояПроцедура", Параметры);
+
+Рез = ИОС.Выполнить(Действие1);
+Сообщить("Действие1 Рез = " + Рез);
+
+Если Не Рез = "Значение1" Тогда
+	ВызватьИсключение("{Ошибка в " + ИОС.ПутьСценария(ЭтотОбъект) + "}");
+КонецЕсли;
+</div>
+</pre>
             </details>
-        <P></P>
-        <H4 class=dtH4>Смотрите также</H4>
-        <P>
-            <A href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
-        </P>
-    </DIV>
-</BODY>
-</HTML>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <p>
+            <a href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</a> | <a href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</a>
+        </p>
+    </div>
+</body>
+</html>

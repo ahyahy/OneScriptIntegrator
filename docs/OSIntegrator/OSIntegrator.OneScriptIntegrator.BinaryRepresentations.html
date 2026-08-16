@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>BinaryRepresentations Method</title>
+    <meta content="text/html; charset=Windows-1252" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>ИнтеграторОдноСкрипта.ДвоичныеПредставления (OneScriptIntegrator.BinaryRepresentations)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>ДвоичныеПредставления(&lt;НачальноеЧисло&gt;, &lt;КонечноеЧисло&gt;, &lt;ДополнятьНулями&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>НачальноеЧисло</i> (обязательный)</dt>
+            <dd>Тип: Число.</dd>
+            <dd>Начальное число диапазона.</dd>
+            <dt><i>КонечноеЧисло</i> (обязательный)</dt>
+            <dd>Тип: Число.</dd>
+            <dd>Конечное число диапазона.</dd>
+            <dt><i>ДополнятьНулями</i> (необязательный)</dt>
+            <dd>Тип: Булево.</dd>
+            <dd>Флаг дополнения строки нулями слева до рассчитанной длины. Значение по умолчанию - <b>Истина</b>.</dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Массив.</p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Возвращает в виде массива последовательность целых чисел от параметра <b>НачальноеЧисло</b> до параметра <b>КонечноеЧисло</b>, включительно, переведенных в строковое представление двоичного числа.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+        <p>
+            <pre class=code>
+М = ИОС.ДвоичныеПредставления(0, 255);
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="cont0" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="cont0">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+М = ИОС.ДвоичныеПредставления(0, 255);
+Для А = 0 По М.ВГраница() Цикл
+	Сообщить("" + М.Получить(А));
+КонецЦикла;
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <p>
+            <a href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</a> | <a href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</a>
+        </p>
+    </div>
+</body>
+</html>

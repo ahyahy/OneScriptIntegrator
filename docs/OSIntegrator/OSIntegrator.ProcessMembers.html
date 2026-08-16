@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Process Members</title>
+    <meta content="text/html; charset=Windows-1252" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+	<script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>Процесс (Process) Члены </h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <p><a href="OSIntegrator.Process.html">Обзор&nbsp;Процесс&nbsp;(Process)</a></p>
+        <h4 class=dtH4>Конструктор</h4>
+        <div class=tablediv>
+            <table class=dtTABLE cellSpacing=0>
+                <tbody>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubmethod.gif"><a href="OSIntegrator.ProcessConstructor.html">Процесс&nbsp;(Process)&nbsp;Конструктор</a></td>
+                        <td width="50%">Используйте метод <a href="OSIntegrator.OneScriptIntegrator.Process.html">ИнтеграторОдноСкрипта.Процесс&nbsp;(OneScriptIntegrator.Process)</a> для создания нового экземпляра класса <a href="OSIntegrator.Process.html">Процесс&nbsp;(Process)</a>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4 class=dtH4>Свойства</h4>
+        <div class=tablediv>
+            <table class=dtTABLE cellSpacing=0>
+                <tbody>					
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubproperty.gif"></img><a href="OSIntegrator.Process.StartTime.html">ВремяНачала&nbsp;(StartTime)</a></td>
+                        <td width="50%">Возвращает время запуска процесса.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubproperty.gif"></img><a href="OSIntegrator.Process.Handle.html">Дескриптор&nbsp;(Handle)</a></td>
+                        <td width="50%">Возвращает собственный дескриптор процесса.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubproperty.gif"></img><a href="OSIntegrator.Process.HasExited.html">Закрыт&nbsp;(HasExited)</a></td>
+                        <td width="50%">Возвращает значение, указывающее, был ли закрыт процесс.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubproperty.gif"></img><a href="OSIntegrator.Process.Id.html">Идентификатор&nbsp;(Id)</a></td>
+                        <td width="50%">Возвращает созданный системой уникальный идентификатор процесса.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubproperty.gif"></img><a href="OSIntegrator.Process.ProcessName.html">ИмяПроцесса&nbsp;(ProcessName)</a></td>
+                        <td width="50%">Возвращает имя процесса.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubproperty.gif"></img><a href="OSIntegrator.Process.StartInfo.html">НачальнаяИнформация&nbsp;(StartInfo)</a></td>
+                        <td width="50%">Возвращает или задает набор значений для передачи их объекту <b>Процесс (Process)</b>.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubproperty.gif"></img><a href="OSIntegrator.Process.StandardOutput.html">ПотокВывода&nbsp;(StandardOutput)</a></td>
+                        <td width="50%">Возвращает поток, используемый для чтения текстовых выходных данных приложения.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4 class=dtH4>Методы</h4>
+        <div class=tablediv>
+            <table class=dtTABLE cellSpacing=0>
+                <tbody>					
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubmethod.gif"></img><a href="OSIntegrator.Process.Start.html">Начать&nbsp;(Start)</a></td>
+                        <td width="50%">Запускает (или повторно использует) ресурс процесса, определенный свойством <b>Процесс.НачальнаяИнформация (Process.StartInfo)</b> этого компонента <b>Процесс (Process)</b>, и связывает его с компонентом.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubmethod.gif"></img><a href="OSIntegrator.Process.BeginOutputReadLine.html">НачатьЧтениеВывода&nbsp;(BeginOutputReadLine)</a></td>
+                        <td width="50%">Начинает асинхронные операции чтения в перенаправленном потоке вывода приложения.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubmethod.gif"></img><a href="OSIntegrator.Process.WaitForExit.html">ОжидатьЗакрытия&nbsp;(WaitForExit)</a></td>
+                        <td width="50%">Указывает ждать заданное количество миллисекунд для закрытия процесса.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubmethod.gif"></img><a href="OSIntegrator.Process.CancelOutputRead.html">ОтменитьЧтениеВывода&nbsp;(CancelOutputRead)</a></td>
+                        <td width="50%">Отменяет асинхронную операцию чтения в перенаправленном потоке вывода приложения.</td>
+                    </tr>
+                    <tr vAlign=top>
+                        <td width="50%"><img src="pubmethod.gif"></img><a href="OSIntegrator.Process.Kill.html">Уничтожить&nbsp;(Kill)</a></td>
+                        <td width="50%">Немедленно останавливает процесс.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4 class=dtH4>Смотрите также</h4>
+        <p>
+            <a href="OSIntegrator.Process.html">Процесс&nbsp;(Process)&nbsp;Класс</a> | <a href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</a>
+        </p>
+    </div>
+</body>
+</html>

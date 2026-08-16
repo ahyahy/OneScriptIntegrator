@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>OneScriptIntegrator.ParseBetween Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>ИнтеграторОдноСкрипта.НайтиМежду (OneScriptIntegrator.ParseBetween)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>НайтиМежду(&lt;ИсходнаяСтрока&gt;, &lt;ОтСтроки&gt;, &lt;ДоСтроки&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>ИсходнаяСтрока</i> (обязательный)</dt>
+            <dd>Тип: Строка.</dd>
+            <dd>
+                Строка, в которой производится поиск.
+            </dd>
+            <dt><i>ОтСтроки</i> (необязательный)</dt>
+            <dd>Тип: Строка.</dd>
+            <dd>
+                Строка, от которой ведем поиск.
+            </dd>
+            <dt><i>ДоСтроки</i> (необязательный)</dt>
+            <dd>Тип: Строка.</dd>
+            <dd>
+                Строка, до которой ведем поиск.
+            </dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Строка.</p>
+        <p></p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Поиск в строке с указанием левой и правой границ поиска. Возвращается первый найденный по указанным условиям фрагмент. Если фрагмент не найден возвращается <b>Неопределено</b>.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+Стр = "Съешь же ещё этих мягких французских булок да выпей чаю";
+Стр2 = ИОС.НайтиМежду(Стр, , "зск");
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="gtqil" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="gtqil">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+Стр = "Съешь же ещё этих мягких французских булок да выпей чаю";
+
+Стр2 = ИОС.НайтиМежду(Стр, , "зск");
+Стр3 = ИОС.НайтиМежду(Стр, "ещё эт", );
+Стр4 = ИОС.НайтиМежду(Стр, " ещ", "чаю");
+
+Сообщить(Стр2); // "Съешь же ещё этих мягких францу"
+Сообщить(Стр3); // "их мягких французских булок да выпей чаю"
+Сообщить(Стр4); // "ё этих мягких французских булок да выпей "
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>

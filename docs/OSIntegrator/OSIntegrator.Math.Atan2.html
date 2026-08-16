@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Math.Atan2 Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>Математика.АТангенс2 (Math.Atan2)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>АТангенс2(&lt;Y&gt;, &lt;X&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>Y</i> (обязательный)</dt>
+            <dd>Тип: Число.</dd>
+            <dd>
+                Y координата точки.
+            </dd>
+            <dt><i>X</i> (обязательный)</dt>
+            <dd>Тип: Число.</dd>
+            <dd>
+                X координата точки.
+            </dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Число.</p>
+        <p>Угол, измеренный в радианах.</p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Возвращает числовое значение от <b>-Пи</b> до <b>Пи</b>, представляющее угол точки <b>(x, y)</b>. Это выраженный в радианах угол, отсчитываемый против часовой стрелки от положительного направления оси <b>X</b> до точки <b>(x, y)</b>. Обратите внимание, что первой в метод передаётся координата <b>y</b>, а только второй - координата <b>x</b>.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+Сообщить("АТангенс2(-1, -1) = " + ИОС.Математика().АТангенс2(-1, -1));
+Сообщить("АТангенс2(1, 1) = " + ИОС.Математика().АТангенс2(1, 1));
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="zrfqp" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="zrfqp">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+Сообщить("АТангенс2(-1, -1) = " + ИОС.Математика().АТангенс2(-1, -1));
+Сообщить("АТангенс2(1, 1) = " + ИОС.Математика().АТангенс2(1, 1));
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.Math.html">Математика&nbsp;(Math)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>

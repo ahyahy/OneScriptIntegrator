@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Parameter Property</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>АргументыСобытия.Параметр&nbsp;(EventArgs.Parameter)&nbsp;Свойство</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Использование</h4>
+        <p>Только чтение.</p>
+        <h4 class=dtH4>Значение</h4>
+        <p>Тип: Произвольный.</p>
+        <p>Возвращает объект, заданный при установке обработчика события, для передачи в обработчик события.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+Сообщить(ИОС.АргументыСобытия.Параметр.Ключ1);
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="52naj" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="52naj">
+Перем ИОС, Счетчик;
+
+Процедура ОбработкаТаймера1() Экспорт
+	Сообщить("ОбработкаТаймера1 " + ТекущаяУниверсальнаяДатаВМиллисекундах());
+	Сообщить(ИОС.АргументыСобытия.Параметр.Ключ1);
+	Счетчик = Счетчик + 1;
+КонецПроцедуры
+
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+Таймер1 = ИОС.Таймер();
+Действие = ИОС.Действие(ЭтотОбъект, "ОбработкаТаймера1");
+Действие.Параметр = Новый Структура("Ключ1", "Значение1");
+Таймер1.Начать(Действие, 1500, 2300);
+Сообщить("Таймер запущен. Сценарий продолжается, таймер работает в фоне.");
+
+Счетчик = 0;
+Пока Счетчик < 2 Цикл
+	Приостановить(1000);
+КонецЦикла;
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.EventArgs.html">АргументыСобытия&nbsp;(EventArgs)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>

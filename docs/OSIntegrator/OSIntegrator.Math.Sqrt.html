@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Math.Sqrt Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>Математика.ККорень (Math.Sqrt)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>ККорень(&lt;ЧисловойПараметр&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>ЧисловойПараметр</i> (обязательный)</dt>
+            <dd>Тип: Число.</dd>
+            <dd>
+                Число, квадратный корень которого нужно найти.
+            </dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Число.</p>
+        <p>Квадратный корень параметра <b>ЧисловойПараметр</b>.</p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Возвращает квадратный корень из указанного числа.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+Сообщить("ККорень(3) = " + ИОС.Математика().ККорень(3));
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="1bt5o" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="1bt5o">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+Сообщить("ККорень(3) = " + ИОС.Математика().ККорень(3));
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.Math.html">Математика&nbsp;(Math)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>

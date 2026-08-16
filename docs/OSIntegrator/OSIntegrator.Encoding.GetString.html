@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Encoding.GetString Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>Кодировка.ПолучитьСтроку (Encoding.GetString)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>ПолучитьСтроку(&lt;БайтМассив&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>БайтМассив</i> (обязательный)</dt>
+            <dd>Тип: Массив.</dd>
+            <dd>
+                Массив байтов для декодирования.
+            </dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Строка.</p>
+        <p>Строка, содержащая декодированное представление указанного массива байтов.</p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Возвращает строку, содержащую все декодированные байты из указанного массива байтов.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p>Байтовые значения переводятся в целые числа.</p>
+        <p>
+			При преобразовании массива байтов, с использованием кодировки, полученной через свойство <b>ПоУмолчанию (ByDefault)</b>, и получением после этого строкового значения, в конце строки может быть добавлено несколько символов.
+		</p>
+        <p>
+			Эти символы будут соответствовать коду <b>9702</b> в кодировке <b>Unicode</b> (Прозрачный маркер списка).
+		</p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+Кодировка1 = ИОС.Кодировка.Юникод;
+Массив = Кодировка1.ПолучитьБайты("Откуда мне знать?");
+Сообщить("ПолучитьСтроку = " + Кодировка1.ПолучитьСтроку(Массив));
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="wwrxg" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="wwrxg">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+Кодировка1 = ИОС.Кодировка.Юникод;
+Массив = Кодировка1.ПолучитьБайты("Откуда мне знать?");
+Сообщить("ПолучитьСтроку = " + Кодировка1.ПолучитьСтроку(Массив));
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.Encoding.html">Кодировка&nbsp;(Encoding)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>OneScriptIntegrator.BinaryDataToBinaryString Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>ИнтеграторОдноСкрипта.ДвоичныеДанныеВДвоичнуюСтроку (OneScriptIntegrator.BinaryDataToBinaryString)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>ДвоичныеДанныеВДвоичнуюСтроку(&lt;Путь&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>Путь</i> (обязательный)</dt>
+            <dd>Тип: Строка.</dd>
+            <dd>
+                Путь до файла двоичных данных.
+            </dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Строка.</p>
+        <p>Строка нулей и единиц полученная из двоичных данных.</p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Возвращает строку двоичных чисел как результат обработки двоичных данных.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+СтрИзДД = ИОС.ДвоичныеДанныеВДвоичнуюСтроку(ПутьРисунка);
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="cont0" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="cont0">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+Стр1 = "001010100001000010010101011000000010110000101000000100000001000000001010000010000000000000000001000000000000111111111111111111111111000000000000000000000000000000000000000000000000000000000000000001111110011111111111111111111111111110011111111111111111111111111110011111111111111111111111111110011111111111111111111111111110011111111111111111111111111110011111111111111111111111111110011111111111111111111110011111111111111110011111111111111111000000011111111111111111110000001111111111111111111110000011111111111111111111111000011111111111111111111111110001111111111111111111111111110011111111111111111111111111111011111111111111111111111";
+Стр2 = "AAABAAEAEBACAAEAAQCwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8P////D////w////8P////D////w////8P///AAD//wAA//+AAf//wAP//+AH///wD///+B////w////+f///";
+ДД = Base64Значение(Стр2);
+ПутьРисунка = ОбъединитьПути(ИОС.КаталогСценария(ЭтотОбъект), "рисунок.ico");
+ДД.Записать(ПутьРисунка);
+Приостановить(3000);
+
+СтрИзДД = ИОС.ДвоичныеДанныеВДвоичнуюСтроку(ПутьРисунка);
+Сообщить("" + СтрИзДД);
+
+Если Не Стр1 = СтрИзДД Тогда
+	ВызватьИсключение("{Ошибка в " + ИОС.ПутьСценария(ЭтотОбъект) + "}");
+КонецЕсли;
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>

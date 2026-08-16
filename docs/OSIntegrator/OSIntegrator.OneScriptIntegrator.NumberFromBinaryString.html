@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>OneScriptIntegrator.NumberFromBinaryString Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>ИнтеграторОдноСкрипта.ДесятичноеИзДвоичнойСтроки (OneScriptIntegrator.NumberFromBinaryString)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>ДесятичноеИзДвоичнойСтроки(&lt;СтрокаИзНулейЕдиниц&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>СтрокаИзНулейЕдиниц</i> (обязательный)</dt>
+            <dd>Тип: Строка.</dd>
+            <dd>
+                Строка из нулей и единиц.
+            </dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Число.</p>
+        <p></p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Возвращает целое число из представленной строки из нулей и единиц.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p></p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+Сообщить("" + ИОС.ДесятичноеИзДвоичнойСтроки("10001101"));
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="cont0" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="cont0">
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+Сообщить("" + ИОС.ДесятичноеИзДвоичнойСтроки("10001101"));
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>
