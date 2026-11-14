@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>OneScriptIntegrator.ReportIfFalse Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>ИнтеграторОдноСкрипта.СообщитьЕслиЛожь (OneScriptIntegrator.ReportIfFalse)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>СообщитьЕслиЛожь(&lt;Условие&gt;, &lt;Сообщение&gt;)</p>
+        <h4 class=dtH4>Параметры</h4>
+        <dl>
+            <dt><i>Условие</i> (обязательный)</dt>
+            <dd>Тип: Булево.</dd>
+            <dd>
+                Проверяемое условие.
+            </dd>
+            <dt><i>Сообщение</i> (обязательный)</dt>
+            <dd>Тип: Строка.</dd>
+            <dd>
+                Текст сообщения.
+            </dd>
+        </dl>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p></p>
+        <p></p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Выводит заключенный в фигурные скобки текст, переданный в параметре Сообщение, если условие, переданное в параметре <b>Условие</b> возвратит <b>Ложь</b>. Метод создан для оптимизации тестирования.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p>
+			Используя метод ИнтеграторОдноСкрипта.СообщитьЕслиЛожь (OneScriptIntegrator.ReportIfFalse) можно получить имитацию исключения в сценарии. 
+			Имитация означает, что оповещение об исключении выводится в консоль в том же формате, что и при исключении, с указанием 
+			модуля, строки с ошибкой и описания ошибки. Исключением же по сути это не является. Сценарий при этом завершает свою 
+			работу с кодом ошибки равном <b>1</b>.
+		</p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+ИОС.СообщитьЕслиЛожь(10 = 55, "Здесь ошибка");
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="gcwoi" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="gcwoi">
+Перем ИОС;
+
+Процедура ОбработкаТаймера() Экспорт
+	ИОС.СообщитьЕслиЛожь(10 = 55, "Здесь ошибка");
+	ИОС.Продолжать = Ложь;
+КонецПроцедуры
+
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+ИОС.ОдноразовыйТаймер(ИОС.Действие(ЭтотОбъект, "ОбработкаТаймера"), 1000);
+
+Пока ИОС.Продолжать Цикл
+	Приостановить(1000);
+КонецЦикла;
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>

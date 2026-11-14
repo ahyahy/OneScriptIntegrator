@@ -8,6 +8,7 @@ using ScriptEngine.Machine;
 using System.Reflection;
 using ScriptEngine.HostedScript.Library;
 using System.Collections.Concurrent;
+using OneScript.Language;
 
 namespace osi
 {
@@ -23,6 +24,7 @@ namespace osi
         private static object syncRoot = new Object();
         public static ConcurrentQueue<OsiEventArgs> EventQueue = new ConcurrentQueue<OsiEventArgs>();
         public static bool goOn = true;
+        public event Action<string> OnTestException; // Для отлова событий в сценарных обработчиках событий.
 
         public static OneScriptIntegrator getInstance()
         {
@@ -33,6 +35,7 @@ namespace osi
                     if (instance == null)
                     {
                         instance = new OneScriptIntegrator();
+                        instance.OnTestException += Instance_OnTestException;
                     }
                 }
             }
@@ -41,6 +44,12 @@ namespace osi
                 systemVersionIsMicrosoft = true;
             }
             return instance;
+        }
+
+        private static void Instance_OnTestException(string obj)
+        {
+            Utils.Echo(obj);
+            Environment.Exit(1);
         }
 
         [ScriptConstructor]
@@ -65,7 +74,14 @@ namespace osi
     Контекст.Вставить(""ИОС"", параметр1);
     Стр = ""
     |Пока ИОС.Продолжать Цикл
-    |	ИОС.ПолучитьСобытие().Выполнить();
+    |   Попытка
+    |       Пока ИОС.Продолжать Цикл
+    |            ИОС.ПолучитьСобытие().Выполнить();
+    |       КонецЦикла;
+    |   Исключение
+    |       Ошибка = ИнформацияОбОшибке();
+    |       ИОС.ПроброситьИсключение(""""{Модуль """" + Ошибка.ИмяМодуля + """" / Ошибка в строке: """" + Ошибка.НомерСтроки + """" / """" + Ошибка.Описание);
+    |   КонецПопытки;
     |КонецЦикла;
     |"";
     ЗагрузитьСценарийИзСтроки(Стр, Контекст);
@@ -639,6 +655,28 @@ namespace osi
         public OsiProcessWindowStyle ProcessWindowStyle
         {
             get { return new OsiProcessWindowStyle(); }
+        }
+
+        [ContextMethod("СообщитьЕслиЛожь", "ReportIfFalse")]
+        public void ReportIfFalse(bool condition, string message)
+        {
+            if (!condition)
+            {
+                ScriptException scriptException = new ScriptException(message);
+                throw scriptException;
+            }
+        }
+
+        [ContextMethod("ПроброситьИсключение", "SkipException")]
+        public void SkipException(string message)
+        {
+            OnTestException?.Invoke(message);
+        }
+
+        [ContextMethod("ТекущаяДатаСМиллисекундами", "CurrentDateWithMilliseconds")]
+        public string CurrentDateWithMilliseconds()
+        {
+            return DateTime.Now.ToString(@"dd:MM:yyyy HH:mm:ss.fffffff");
         }
     }
 }

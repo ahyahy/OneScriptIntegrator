@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>OneScriptIntegrator.CurrentDateWithMilliseconds Method</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script defer src="mobilstyle.js"></script>
+</head>
+<body id=bodyID class=dtBODY onclick="divrightClick(event)">
+    <div id=nsbanner>
+        <div id=bannerrow1>
+            <table class=bannerparthead cellSpacing=0>
+                <tbody>
+                    <tr id=hdr>
+                        <td class=runninghead></td>
+                        <td class=product></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id=TitleRow>
+            <h1 class=dtH1>ИнтеграторОдноСкрипта.ТекущаяДатаСМиллисекундами (OneScriptIntegrator.CurrentDateWithMilliseconds)&nbsp;Метод</h1>
+        </div>
+    </div>
+    <div id=nstext>
+        <h4 class=dtH4>Синтаксис</h4>
+        <p>ТекущаяДатаСМиллисекундами()</p>
+        <h4 class=dtH4>Возвращаемое значение</h4>
+        <p>Тип: Строка.</p>
+        <p>Строка с датой с миллисекундами.</p>
+        <h4 class=dtH4>Описание</h4>
+        <p>Возвращает строку с текущей (системной) датой на компьютере с миллисекундами до седьмого знака.</p>
+        <h4 class=dtH4>Примечание</h4>
+        <p>
+			Дата выводится в соответствии с форматной строкой <b>[dd:MM:yyyy HH:mm:ss.fffffff]</b>. 
+			Буквы <b>f</b> отвечают за дробную часть секунды (то есть за доли секунды после точки).
+		</p>
+        <p>
+			Как работает <b>f</b> в зависимости от количества символов.
+			<br><b>f</b> — одна самая старшая цифра доли секунды (десятые доли, то есть 0–9).
+			<br><b>f</b> — две цифры (сотые доли).
+			<br><b>f</b> — три цифры (тысячные доли, это уже миллисекунды).
+			<br>…
+			<br><b>f</b> — семь цифр (десятимиллионные доли секунды).
+			<br>То есть количество <b>f</b> задаёт, сколько знаков после запятой будет показано.
+		</p>
+        <h4 class=dtH4>Пример</h4>
+            <pre class=code>
+Сообщить("ТекущаяДатаСМиллисекундами = " + ИОС.ТекущаяДатаСМиллисекундами());
+</pre>
+            <details>
+                <summary>Полный пример кода</summary>
+                <pre class=code id="sample-code-reflection">
+<button type="button" class="copy-btn" data-target-id="0ptl3" style="font-size:100%;">Копировать</button>
+<hr style="border-color: lightgray;"><div id="0ptl3">
+Перем ИОС;
+
+Процедура ОбработкаТаймера() Экспорт
+	Сообщить("ТекущаяДатаСМиллисекундами = " + ИОС.ТекущаяДатаСМиллисекундами());
+	ИОС.Продолжать = Ложь;
+КонецПроцедуры
+
+ПодключитьВнешнююКомпоненту(ОбъединитьПути(Новый Файл(ТекущийСценарий().Источник).Путь, "OneScriptIntegrator.dll"));
+ИОС = Новый ИнтеграторОдноСкрипта();
+
+ИОС.ОдноразовыйТаймер(ИОС.Действие(ЭтотОбъект, "ОбработкаТаймера"), 1000);
+
+Пока ИОС.Продолжать Цикл
+	Приостановить(1000);
+КонецЦикла;
+</div>
+</pre>
+            </details>
+        <p></p>
+        <h4 class=dtH4>Смотрите также</h4>
+        <A href="OSIntegrator.OneScriptIntegrator.html">ИнтеграторОдноСкрипта&nbsp;(OneScriptIntegrator)&nbsp;Класс</A> | <A href="OSIntegrator.html">Библиотека&nbsp;OneScriptIntegrator</A>
+    </div>
+</body>
+</html>
